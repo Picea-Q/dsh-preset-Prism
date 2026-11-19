@@ -9,6 +9,7 @@
 > Ten disciplines. One agent. Zero mode-switching.
 > A security-research agent preset for DeepSeek Harness: the persona carries all ten playbooks at once, so you stop switching modes and start finishing.
 
+[![release](https://img.shields.io/github/v/release/Picea-Q/dsh-preset-Prism?color=4fd1c5&label=release)](https://github.com/Picea-Q/dsh-preset-Prism/releases/latest)
 ![license](https://img.shields.io/badge/license-MIT-4fd1c5)
 ![platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-8a94a6)
 ![dsh](https://img.shields.io/badge/DSH-agent%20preset-4fd1c5)
