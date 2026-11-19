@@ -5,7 +5,7 @@
 **给 DeepSeek Harness 装一个「十个方向一体」的安全研究人格。** 一个身份，十本 playbook，零次模式切换。
 
 > Ten disciplines. One agent. Zero mode-switching.
-> A security-research agent preset for [DeepSeek Harness](https://github.com/): the persona carries all ten playbooks at once, so you stop switching modes and start finishing.
+> A security-research agent preset for DeepSeek Harness: the persona carries all ten playbooks at once, so you stop switching modes and start finishing.
 
 ![license](https://img.shields.io/badge/license-MIT-4fd1c5)
 ![platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-8a94a6)
@@ -71,14 +71,14 @@
 
 ```powershell
 # Windows
-git clone https://github.com/<you>/dsh-preset-shimian
+git clone https://github.com/Picea-Q/dsh-preset-Prism
 cd dsh-preset-shimian
 powershell -ExecutionPolicy Bypass -File install\install.ps1
 ```
 
 ```bash
 # macOS / Linux
-git clone https://github.com/<you>/dsh-preset-shimian
+git clone https://github.com/Picea-Q/dsh-preset-Prism
 cd dsh-preset-shimian
 python3 install/install.py
 ```
