@@ -1,5 +1,7 @@
 # 棱镜 · Prism
 
+**简体中文** · [English](README_EN.md)
+
 ![banner](assets/banner.png)
 
 **给 DeepSeek Harness 装一个「十个方向一体」的安全研究人格。** 一个身份，十本 playbook，零次模式切换。
