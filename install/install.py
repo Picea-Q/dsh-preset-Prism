@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""把「十面安全研究模式」装进 DeepSeek Harness（macOS / Linux / Windows 通用）。
+"""把「棱镜 · 安全研究模式」装进 DeepSeek Harness（macOS / Linux / Windows 通用）。
 
 做三件事：
   1. 读 preset/agent.cordis.yml
@@ -13,8 +13,8 @@ import sys
 import time
 from pathlib import Path
 
-BEGIN = "# ---- shi-mian preset begin（install 脚本生成，勿手改）----"
-END = "# ---- shi-mian preset end ----"
+BEGIN = "# ---- dsh-prism preset begin（install 脚本生成，勿手改）----"
+END = "# ---- dsh-prism preset end ----"
 
 DESC = ("安全研究总控：Web/API 安全测试、代码审计、二进制分析、样本免杀研究、应急溯源、"
         "云与容器、CTF、资产映射等十个方向一体，十本 playbook 全量挂载，统一输出纪律，"
@@ -66,7 +66,7 @@ def main() -> int:
         indent = line[: len(line) - len(line.lstrip())] if stripped.startswith("- !!js") else ""
 
         if "new URL('skills/', baseUrl)" in line:
-            target = dsh_home / ".agent-presets" / "pojia" / "skills"
+            target = dsh_home / ".agent-presets" / "prism" / "skills"
             if target.is_dir():
                 body.append(f'{indent}- "{target.as_posix()}"')
                 kept += 1
@@ -96,11 +96,11 @@ def main() -> int:
     decl = [
         BEGIN,
         "- insert:",
-        "    - id: preset-pojia",
+        "    - id: preset-prism",
         "      name: '@deepseek-ai/dsh-agent-preset'",
         "      config:",
-        "        id: pojia",
-        "        name: 十面安全研究模式",
+        "        id: prism",
+        "        name: 棱镜 · 安全研究模式",
         f"        description: '{DESC}'",
         "        order: 95",
         "        plugins:",
@@ -125,8 +125,8 @@ def main() -> int:
     patch.write_text(text, encoding="utf-8")
     print("\n装好了。下一步：")
     print("  1) 完全退出 DeepSeek Harness 再打开")
-    print("  2) 新建会话 -> 人格选择器选「十面安全研究模式」")
-    print("  3) 说一句「在吗」，应该回：十面已开镜。报目标。")
+    print("  2) 新建会话 -> 人格选择器选「棱镜 · 安全研究模式」")
+    print("  3) 说一句「在吗」，应该回：棱镜已校准。报目标。")
     return 0
 
 

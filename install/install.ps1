@@ -1,6 +1,6 @@
 ﻿<#
 .SYNOPSIS
-  把「十面安全研究模式」装进 DeepSeek Harness（写入 profile 的 preset 声明行）。
+  把「棱镜 · 安全研究模式」装进 DeepSeek Harness（写入 profile 的 preset 声明行）。
 
 .DESCRIPTION
   做三件事：
@@ -40,8 +40,8 @@ Write-Host "profile  : $Profile"
 Write-Host "patch    : $Patch"
 Write-Host ""
 
-$Begin = "# ---- shi-mian preset begin（install 脚本生成，勿手改）----"
-$End = "# ---- shi-mian preset end ----"
+$Begin = "# ---- dsh-prism preset begin（install 脚本生成，勿手改）----"
+$End = "# ---- dsh-prism preset end ----"
 
 $lines = [IO.File]::ReadAllLines($SrcYml, [Text.Encoding]::UTF8)
 $body = New-Object 'System.Collections.Generic.List[string]'
@@ -64,7 +64,7 @@ foreach ($line in $lines) {
     if ($line -match '^(\s*)-\s+!!js') { $indent = $Matches[1] }
 
     if ($line.Contains("new URL('skills/', baseUrl)")) {
-        $abs = Join-Path $DshHome ".agent-presets\pojia\skills"
+        $abs = Join-Path $DshHome ".agent-presets\prism\skills"
         if (Test-Path $abs) { $body.Add($indent + '- "' + ($abs -replace '\\', '/') + '"'); $kept++ } else { $skipped++ }
         continue
     }
@@ -91,11 +91,11 @@ $Description = '安全研究总控：Web/API 安全测试、代码审计、二�
 $decl = New-Object 'System.Collections.Generic.List[string]'
 $decl.Add($Begin)
 $decl.Add("- insert:")
-$decl.Add("    - id: preset-pojia")
+$decl.Add("    - id: preset-prism")
 $decl.Add("      name: '@deepseek-ai/dsh-agent-preset'")
 $decl.Add("      config:")
-$decl.Add("        id: pojia")
-$decl.Add("        name: 十面安全研究模式")
+$decl.Add("        id: prism")
+$decl.Add("        name: 棱镜 · 安全研究模式")
 $decl.Add("        description: '$Description'")
 $decl.Add("        order: 95")
 $decl.Add("        plugins:")
@@ -128,7 +128,7 @@ if ($text.Contains($Begin)) {
 Write-Host ""
 Write-Host "装好了。下一步：" -ForegroundColor Green
 Write-Host "  1) 完全退出 DeepSeek Harness（托盘也退出）再打开"
-Write-Host "  2) 新建会话 -> 人格选择器选「十面安全研究模式」"
-Write-Host "  3) 说一句「在吗」，应该回：十面已开镜。报目标。"
+Write-Host "  2) 新建会话 -> 人格选择器选「棱镜 · 安全研究模式」"
+Write-Host "  3) 说一句「在吗」，应该回：棱镜已校准。报目标。"
 Write-Host ""
 Write-Host "卸载：powershell -ExecutionPolicy Bypass -File install\uninstall.ps1"

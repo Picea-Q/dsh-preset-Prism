@@ -53,11 +53,11 @@ def banner():
     d.rectangle([0, 0, W, 4], fill=ACCENT)
 
     title_font = f(BOLD, 150)
-    d.text((72, 52), "十面", font=title_font, fill=TEXT)
-    tb = d.textbbox((72, 52), "十面", font=title_font)
+    d.text((72, 52), "棱镜", font=title_font, fill=TEXT)
+    tb = d.textbbox((72, 52), "棱镜", font=title_font)
     line_y = tb[3] + 12
     d.line([(78, line_y), (300, line_y)], fill=ACCENT, width=3)
-    d.text((78, line_y + 14), "SHI MIAN", font=f(BOLD, 32), fill=ACCENT)
+    d.text((78, line_y + 14), "PRISM", font=f(BOLD, 32), fill=ACCENT)
     d.text((78, line_y + 58), "Ten-Discipline Security Research Preset", font=f(REG, 23), fill=MUTED)
 
     items = ["渗透", "攻防", "代码审计", "二进制", "免杀", "应急", "云安全", "CTF", "资产测绘", "路由"]
@@ -127,7 +127,7 @@ def output():
     d.rounded_rectangle([right_x, top, right_x + box_w, top + box_h], radius=14, fill=PANEL, outline=ACCENT, width=1)
 
     d.text((left_x + 24, top + 20), "默认人格", font=f(BOLD, 22), fill=WARN)
-    d.text((right_x + 24, top + 20), "十面", font=f(BOLD, 22), fill=ACCENT)
+    d.text((right_x + 24, top + 20), "棱镜", font=f(BOLD, 22), fill=ACCENT)
 
     q = "问：「帮我看看这个目标」"
     d.text((left_x + 24, top + 62), q, font=f(REG, 18), fill=MUTED)
