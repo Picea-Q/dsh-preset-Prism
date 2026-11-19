@@ -1,4 +1,4 @@
-# 棱镜 · Shi Mian
+# 棱镜 · Prism
 
 ![banner](assets/banner.png)
 
@@ -72,14 +72,14 @@
 ```powershell
 # Windows
 git clone https://github.com/Picea-Q/dsh-preset-Prism
-cd dsh-preset-shimian
+cd dsh-preset-Prism
 powershell -ExecutionPolicy Bypass -File install\install.ps1
 ```
 
 ```bash
 # macOS / Linux
 git clone https://github.com/Picea-Q/dsh-preset-Prism
-cd dsh-preset-shimian
+cd dsh-preset-Prism
 python3 install/install.py
 ```
 

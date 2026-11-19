@@ -105,8 +105,8 @@ foreach ($l in $body) {
 $decl.Add($End)
 
 $stamp = Get-Date -Format "yyyyMMdd-HHmmss"
-Copy-Item $Patch "$Patch.bak-shimian-$stamp" -Force
-Write-Host "已备份 patch -> $Patch.bak-shimian-$stamp"
+Copy-Item $Patch "$Patch.bak-prism-$stamp" -Force
+Write-Host "已备份 patch -> $Patch.bak-prism-$stamp"
 
 $text = [IO.File]::ReadAllText($Patch, [Text.Encoding]::UTF8)
 $block = ($decl -join "`n")

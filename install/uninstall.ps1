@@ -32,7 +32,7 @@ if (-not $text.Contains($Begin)) {
 }
 
 $stamp = Get-Date -Format "yyyyMMdd-HHmmss"
-Copy-Item $Patch "$Patch.bak-shimian-uninstall-$stamp" -Force
+Copy-Item $Patch "$Patch.bak-prism-uninstall-$stamp" -Force
 
 $i = $text.IndexOf($Begin)
 $j = $text.IndexOf($End, $i)
@@ -42,5 +42,5 @@ $j += $End.Length
 $text = ($text.Substring(0, $i).TrimEnd() + "`n" + $text.Substring($j).TrimStart())
 [IO.File]::WriteAllText($Patch, $text, (New-Object Text.UTF8Encoding($false)))
 
-Write-Host "已移除棱镜声明块（备份 $Patch.bak-shimian-uninstall-$stamp）" -ForegroundColor Green
+Write-Host "已移除棱镜声明块（备份 $Patch.bak-prism-uninstall-$stamp）" -ForegroundColor Green
 Write-Host "完全退出 DSH 再打开，选择器里就没有它了"

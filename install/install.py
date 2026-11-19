@@ -110,7 +110,7 @@ def main() -> int:
     decl.append(END)
     block = "\n".join(decl)
 
-    shutil.copy2(patch, patch.with_suffix(f".yml.bak-shimian-{time.strftime('%Y%m%d-%H%M%S')}"))
+    shutil.copy2(patch, patch.with_suffix(f".yml.bak-prism-{time.strftime('%Y%m%d-%H%M%S')}"))
 
     text = patch.read_text(encoding="utf-8")
     if BEGIN in text:
