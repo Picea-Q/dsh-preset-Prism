@@ -1,0 +1,44 @@
+{
+  "name": "dsh-preset-prism",
+  "version": "0.1.0",
+  "description": "棱镜 · Prism —— DeepSeek Harness 十方向一体安全研究 preset。十本 playbook 同时挂载，九条输出纪律写进人格，硬边界写进人格。",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-preset",
+    "deepseek-harness",
+    "agent-preset",
+    "security",
+    "pentest"
+  ],
+  "files": [
+    "cordis.patch.yml",
+    "skills/",
+    "scripts/",
+    "third_party/",
+    "install/",
+    "assets/",
+    "README.md",
+    "README_EN.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "postinstall": "node scripts/sync-assets.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": [
+        "./cordis.patch.yml"
+      ]
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Picea-Q/dsh-preset-Prism.git"
+  }
+}
