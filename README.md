@@ -14,6 +14,14 @@
 ![platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-8a94a6)
 ![dsh](https://img.shields.io/badge/DSH-agent%20preset-4fd1c5)
 
+## 一行装
+
+```bash
+dsh plugin --profile desktop add https://github.com/Picea-Q/dsh-preset-Prism/releases/download/v0.1.1/dsh-preset-prism-0.1.1.tgz
+```
+
+装完**完全退出 DSH 再打开** → 新建会话 → 人格选择器里选 **「棱镜 · 安全研究模式」**。移除插件即完全回滚。
+
 ---
 
 ## 它到底解决什么

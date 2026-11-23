@@ -13,6 +13,14 @@
 ![platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-8a94a6)
 ![dsh](https://img.shields.io/badge/DSH-agent%20preset-4fd1c5)
 
+## Install in one command
+
+```bash
+dsh plugin --profile desktop add https://github.com/Picea-Q/dsh-preset-Prism/releases/download/v0.1.1/dsh-preset-prism-0.1.1.tgz
+```
+
+Then **quit DSH completely and reopen it** → new session → pick **棱镜 · 安全研究模式** in the persona picker. Remove the plugin to roll everything back.
+
 ---
 
 ## The problem it actually solves
