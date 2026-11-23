@@ -105,6 +105,20 @@ It removes only its own declaration block. Sessions already running on it are un
 - **`!!js` is an evaluation tag, not a string quote.** Putting a Windows absolute path (`C:/Users/x/...`) inside it gets parsed as JavaScript — `C:/Users/` becomes a regex literal with invalid flags, and DSH reports `Invalid regular expression flags`. The installer converts those lines into plain strings.
 - **A preset that cannot be clicked in the picker is a preset that failed to parse.** The card shows a red "load failed" badge; hover it and it tells you which plugin and why.
 
+## How it differs from the "jailbreak" plugins
+
+Most security-related plugins in this ecosystem aim at **removing limits** — patching approval away, disabling the sandbox, editing engine source. Prism goes the other way:
+
+| | Prism | Jailbreak-style plugins |
+|---|---|---|
+| Goal | Ten security disciplines + nine output disciplines | Remove refusals and limits |
+| Approval & sandbox | **Untouched**, still your host settings | Patched off |
+| Irreversible operations | Plan only, never auto-executed | Left to the operator |
+| Install | Standard plugin, remove to roll back | Often patches engine source |
+| Playbooks | Ten, shipped with the package | Usually none |
+
+The difference is not "which is stronger" — it is whether you want **less noise**, or **the brakes removed**. Prism does the former, and leaves the brakes to you.
+
 ## The name
 
 *Prism* — white light in, ten directions out. Also a nod to 十面埋伏 (Ambush from Ten Sides), a classic Chinese pipa piece: one piece, ten angles.
