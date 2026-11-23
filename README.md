@@ -77,7 +77,7 @@
 
 ```bash
 # 从 Release tarball
-dsh plugin --profile desktop add https://github.com/Picea-Q/dsh-preset-Prism/releases/download/v0.1.0/dsh-preset-prism-0.1.0.tgz
+dsh plugin --profile desktop add https://github.com/Picea-Q/dsh-preset-Prism/releases/download/v0.1.1/dsh-preset-prism-0.1.1.tgz
 
 # 或直接从 GitHub 源码
 dsh plugin --profile desktop add github:Picea-Q/dsh-preset-Prism
